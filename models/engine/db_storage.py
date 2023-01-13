@@ -183,3 +183,4 @@ class DBStorage:
         close
         """
         self.__session.remove()
+do something
