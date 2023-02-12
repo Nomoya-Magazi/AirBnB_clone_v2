@@ -62,31 +62,19 @@ def intt(n):
 
 
 @app.route("/number_template/<int:n>", strict_slashes=False)
-def template(n):
-    """/number_template/<int:n>
-    Args:
-        n (int): <int:n>
-    Returns:
-        html: render html template
+def number_template(n):
+    """Displays an HTML page only if <n> is an integer.
+    Displays the value of <n> in the body.
     """
-    return render_template("5-number.html", num=n)
+    return render_template("5-number.html", n=n)
 
 
 @app.route("/number_odd_or_even/<int:n>", strict_slashes=False)
-def odd_or_even(n):
-    """/number_odd_or_even/<int:n>
-    Args:
-        n (int): <int:n>
-    Returns:
-        template: html template 6-number_odd_or_even.html
+def number_odd_or_even(n):
+    """Displays an HTML page only if <n> is an integer.
+    States whether <n> is odd or even in the body.
     """
-    if n % 2 == 0:
-        return render_template("6-number_odd_or_even.html",
-                               num="{} is even".format(n))
-    else:
-        return render_template("6-number_odd_or_even.html",
-                               num="{} is odd".format(n))
-
+    return render_template("6-number_odd_or_even.html", n=n)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port='5001', debug=False)
