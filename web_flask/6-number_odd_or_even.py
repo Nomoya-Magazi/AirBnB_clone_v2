@@ -74,7 +74,7 @@ def number_odd_or_even(n):
     """Displays an HTML page only if <n> is an integer.
     States whether <n> is odd or even in the body.
     """
-    return render_template("6-number_odd_or_even.html", n=num)
+    return render_template("6-number_odd_or_even.html", n=n)
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port='5001', debug=False)
